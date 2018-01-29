@@ -52,6 +52,40 @@
         <dd>
             @Html.DisplayFor(model => model.Client.ClientID)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tasks)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Date</th>
+                    <th>Completed By</th>
+                    <th>Component</th>
+                    <th>Description</th>
+                    <th>Time</th>
+                </tr>
+                @foreach (var item in Model.Tasks)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateEntered)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CompletedBy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Component)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Hours)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
     </dl>
 </div>
 <div>

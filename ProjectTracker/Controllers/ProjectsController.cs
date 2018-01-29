@@ -36,6 +36,8 @@ namespace ProjectTracker.Controllers
 
             var project = await _context.Projects
                 .Include(p => p.Client)
+                .Include(p => p.Tasks)
+                .AsNoTracking()
                 .SingleOrDefaultAsync(m => m.ProjectID == id);
             if (project == null)
             {
