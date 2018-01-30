@@ -31,9 +31,9 @@ namespace ProjectTracker.Data
 
             var projects = new Project[]
             {
-                new Project{ClientID=1,ProjectName="Phase Two",Status=Status.Active,EnteredBy="tsulli",DateEntered=DateTime.Parse("2015-05-09")},
-                new Project{ClientID=3,ProjectName="GLaDOS",Status=Status.Active,EnteredBy="tsulli",DateEntered=DateTime.Parse("1998-10-23")},
-                new Project{ClientID=4,ProjectName="Da Vinci",Status=Status.Active,EnteredBy="tsulli",DateEntered=DateTime.Parse("1995-07-01")}
+                new Project{ClientID=1,ProjectName="Phase Two",Status=Status.Active,EnteredBy="tsulli",DateEntered=DateTime.Parse("2015-05-09 13:45:00"),LastUpdated=System.DateTime.Now},
+                new Project{ClientID=3,ProjectName="GLaDOS",Status=Status.Active,EnteredBy="tsulli",DateEntered=DateTime.Parse("1998-10-23 08:25:00"),LastUpdated=System.DateTime.Now},
+                new Project{ClientID=4,ProjectName="Da Vinci",Status=Status.Active,EnteredBy="tsulli",DateEntered=DateTime.Parse("1995-07-01 10:15:00"),LastUpdated=System.DateTime.Now}
             };
                 foreach (Project p in projects)
             {

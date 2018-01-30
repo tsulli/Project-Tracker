@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectTracker.Models
 {
@@ -16,8 +17,12 @@ namespace ProjectTracker.Models
 
         public string Notes { get; set; }
 
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yy h:mm tt}", ApplyFormatInEditMode = true)]
         public DateTime LastUpdated { get; set; }
 
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yy h:mm tt}", ApplyFormatInEditMode = true)]
         public DateTime DateEntered { get; set; }
 
         public Client Client { get; set; }

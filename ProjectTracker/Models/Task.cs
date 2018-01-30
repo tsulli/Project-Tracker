@@ -20,8 +20,13 @@ namespace ProjectTracker.Models {
        public double Hours { get; set; }
 
        public string EnteredBy { get; set; }
-
+              
+       [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yy h:mm tt}", ApplyFormatInEditMode = true)]
        public DateTime DateEntered { get; set; }
+       
+       [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yy h:mm tt}", ApplyFormatInEditMode = true)]
        public DateTime LastUpdated { get; set; }
     }
 
