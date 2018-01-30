@@ -25,9 +25,9 @@ namespace ProjectTracker
         {
             services.AddMvc();
             // for os x
-            services.AddDbContext<ProjectTrackerContext>(options => options.UseSqlite("Data Source=ProjectTracker.db"));
+            //services.AddDbContext<ProjectTrackerContext>(options => options.UseSqlite("Data Source=ProjectTracker.db"));
             // for windows
-            //services.AddDbContext<ProjectTrackerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ProjectTrackerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
