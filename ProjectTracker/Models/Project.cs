@@ -19,15 +19,22 @@ namespace ProjectTracker.Models
 
         [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yy h:mm tt}", ApplyFormatInEditMode = true)]
-        public DateTime LastUpdated { get; set; }
+        public DateTime? LastUpdated { get; set; }
 
         [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yy h:mm tt}", ApplyFormatInEditMode = true)]
         public DateTime DateEntered { get; set; }
 
         public Client Client { get; set; }
-        public ICollection<Task> Tasks { get; set; } 
+        public ICollection<Task> Tasks { get; set; }
+
+        public Project()
+        {
+            DateEntered = DateTime.Now;
+        }
     }
+
+    
 
     public enum Status 
     {
